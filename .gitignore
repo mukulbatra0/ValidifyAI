@@ -111,3 +111,5 @@ public/
 *.pid
 *.pid.lock
 .lock-wscript
+DEPLOYMENT.md
+DEPLOY-CHECKLIST.md
