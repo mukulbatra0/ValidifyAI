@@ -1,0 +1,45 @@
+.score-gauge {
+  display: flex;
+  align-items: center;
+}
+
+/* Small variant */
+.score-gauge--sm {
+  position: relative;
+  width: fit-content;
+}
+
+.score-gauge__num--sm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9px;
+  font-weight: 800;
+  font-family: var(--font-family);
+  line-height: 1;
+}
+
+/* Medium variant */
+.score-gauge--md {
+  gap: var(--space-4);
+}
+
+.score-gauge__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.score-gauge__label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.score-gauge__sub {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  margin: 0;
+}

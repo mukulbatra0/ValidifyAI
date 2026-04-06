@@ -1,0 +1,106 @@
+.idea-card {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.idea-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary-soft);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.idea-card:hover::before { opacity: 0.35; }
+
+.idea-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.idea-card__delete {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.idea-card__delete:hover {
+  color: var(--status-error);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.idea-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.idea-card__desc {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.idea-card__stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-1);
+}
+
+.idea-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.idea-stat--date { margin-left: auto; }
+
+.risk-txt { font-weight: 600; }
+.risk-txt.risk-low    { color: var(--risk-low); }
+.risk-txt.risk-medium { color: var(--risk-medium); }
+.risk-txt.risk-high   { color: var(--risk-high); }
+
+.idea-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary-soft);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-purple-light);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: all var(--transition-base);
+}
+
+.idea-card__cta:hover {
+  background: var(--gradient-primary);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
+}
